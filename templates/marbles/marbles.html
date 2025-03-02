@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %} | Our tiles Inventory {% endblock %}
+{% block content %}
+
+{% load humanize %}
+<!-- Sub banner start -->
+
+
+<div class="w3-row w3-container ">
+ <!-- The Band Section -->
+ <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+  <h2 class="w3-wide">About Us</h2>
+
+  <p class="w3-justify">gohardware.in is a hyperlocal B2C online marketplace that prioritizes convenience and accessibility for purchasing construction materials. Our primary goal is to enhance the procurement experience for a diverse customer base, including homeowners, architects, interior designers, small businesses, and more.
+
+    Our platform is designed to streamline the process of sourcing construction materials by offering doorstep visits and deliveries. We understand the importance of efficiency and convenience in the construction industry, and we aim to provide a seamless and hassle-free experience for our customers.
+    
+    By leveraging technology and our expertise in the construction material industry, we ensure that our customers can easily access a wide range of high-quality construction materials from the comfort of their homes or offices. We pride ourselves on offering a curated selection of products that cater to the unique needs and requirements of individuals and businesses involved in construction projects.
+    
+    Our commitment to customer satisfaction drives us to continually innovate and improve our services. We believe in building strong relationships with both our customers and suppliers, ensuring a reliable and transparent marketplace where everyone can benefit.
+    
+    At gohardware.in, we are passionate about making a positive impact in the construction material procurement landscape, providing a trusted platform that simplifies the process and ultimately contributes to the success of construction projects, big or small. We invite you to experience the future of construction material procurement with us.</p>
+</div>
+
+
+
+<script>
+  // Automatic Slideshow - change image every 4 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+  }
+  
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  var modal = document.getElementById('ticketModal');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+{% endblock %}
