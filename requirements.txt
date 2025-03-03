@@ -1,9 +1,9 @@
 asgiref
 certifi
 chardet
+cryptography==44.0.1
 defusedxml
 dj-database-url
-Django
 django-allauth
 django-ckeditor
 django-js-asset
@@ -24,11 +24,13 @@ certifi
 chardet
 defusedxml
 dj-database-url
-Django
+Django==4.2
 django-allauth
 django-ckeditor
 django-js-asset
 django-multiselectfield
+django-prices==2.3.0
+PyJWT==2.0.0
 gunicorn
 idna
 oauthlib
@@ -42,6 +44,3 @@ sqlparse
 urllib3
 whitenoise
 gunicorn
-
-
-
