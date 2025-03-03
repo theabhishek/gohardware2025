@@ -29,8 +29,9 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = ['*','localhost','https://gohardware.in','https://*.gohardware.in', 'web-production-71e6a.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://gohardware.in','https://*.gohardware.in','web-production-71e6a.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://gohardware.in','https://*.gohardware.in','https://*.web-production-71e6a.up.railway.app']
 # Application definition
+
 
 INSTALLED_APPS = [
     'cars.apps.CarsConfig',
