@@ -3,7 +3,7 @@ certifi
 chardet
 defusedxml
 dj-database-url
-Django==3.2.9
+Django
 django-allauth
 django-ckeditor
 django-js-asset
