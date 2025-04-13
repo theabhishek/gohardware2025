@@ -1,1 +1,1 @@
-web: gunicorn 'ecommerce.wsgi' --log-file - 
+web: gunicorn 'reddit_clone.wsgi' --log-file - 
