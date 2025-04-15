@@ -1,43 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "ecommerce/wsgi.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLambdaSize": "15mb",
-                "runtime": "python3.9",
-                "installCommand": "pip install --no-cache-dir -r requirements.txt",
-                "buildCommand": "python manage.py collectstatic --noinput"
-            }
-        }
-    ],
+    "builds": [{
+        "src": "ecommerce/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }],
     "routes": [
-        {
-            "src": "/static/(.*)",
-            "dest": "/static/$1",
-            "headers": {
-                "Cache-Control": "public, max-age=31536000, immutable"
-            }
-        },
-        {
-            "src": "/admin/static/(.*)",
-            "dest": "/static/admin/$1",
-            "headers": {
-                "Cache-Control": "public, max-age=31536000, immutable"
-            }
-        },
         {
             "src": "/(.*)",
             "dest": "ecommerce/wsgi.py"
         }
-    ],
-    "env": {
-        "PYTHONPATH": "/vercel/path0:/vercel/path0/ecommerce",
-        "DEBUG": "False",
-        "SECRET_KEY": "django-insecure-9w3x2y1z0v8u7t6s5r4q3p2o1n0m9l8k7j6i5h4g3f2e1d0c9b8a7",
-        "ALLOWED_HOSTS": ".vercel.app,okdelhi.in,okdelhi1-2-git-main-errorlads-projects.vercel.app",
-        "CSRF_TRUSTED_ORIGINS": "https://okdelhi.in,https://*.vercel.app",
-
-    }
+    ]
 }
