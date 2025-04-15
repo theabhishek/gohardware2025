@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-8kir3ie!rtu7s7xq3re=auy)q99cspt_uh!^%dakia0+1e03+g
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['*','localhost','https://gohardware.in','https://*.gohardware.in', 'web-production-71e6a.up.railway.app']
+ALLOWED_HOSTS = ['.vercel.app','*','localhost','https://gohardware.in','https://*.gohardware.in', 'web-production-71e6a.up.railway.app']
 CSRF_TRUSTED_ORIGINS = ['https://gohardware.in','https://*.gohardware.in','https://*.web-production-71e6a.up.railway.app']
 # Application definition
 
